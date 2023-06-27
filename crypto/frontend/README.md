@@ -1,4 +1,4 @@
-# Crypto
+# GQless for GraphQL relay
 
 _Where the magic happens_
 
@@ -16,7 +16,7 @@ Before getting started, bear in mind that we assume some level of familiarity wi
 - [JavaScript][learn-javascript]
 - [React][learn-react]
 - [GraphQL][learn-graphql]
-- [Relay][learn-relay]
+- [GQless][learn-gqless]
 - [Next.js][learn-next]
 - [Node.js][learn-node]
 
@@ -28,17 +28,8 @@ If you’re new to this ecosystem, don’t panic! You don’t have to be an expe
 
 ## Requirements
 
-1. Open the integrated terminal in Visual Studio Code by selecting `View > Terminal` or by selecting `Ctrl+`. On a Mac, select `Cmd+` instead.
-
-1. Check if you’ve already intalled [Git][git] version 2.13 or higher:
-
-   ```sh
-   git --version
-   ```
-
-   Otherwise you’ll need to install it, [Git v2][git-install].
-
-1. Check if you’ve already installed [Node.js][node] version 16.10 or higher:
+1. Open the terminal to the project directory.
+2. Check if you’ve already installed [Node.js][node] version 16.10 or higher:
 
    ```sh
    node --version
@@ -46,7 +37,7 @@ If you’re new to this ecosystem, don’t panic! You don’t have to be an expe
 
    Otherwise you’ll need to install it, [Node.js LTS][node-lts].
 
-1. Check if you’ve already installed [Yarn][yarn]:
+3. Check if you’ve already installed [Yarn][yarn]:
 
    ```sh
    yarn --version
@@ -58,41 +49,31 @@ If you’re new to this ecosystem, don’t panic! You don’t have to be an expe
    corepack enable
    ```
 
-1. You’ll need [Visual Studio Code][vscode] or similar IDE.
-
----
-
-## Setup
-
-We’ll use a starter project so we can begin writing code quickly. The starter contains the minimum structure we need to start developing a React/Relay application by using Next.js. It includes some prebuilt utilities (e.g., components, hooks, utils) so we can focus on the data integration and some technical details in place of the look and feel.
-
-Open a terminal or command window and run the following commands:
-
-1. Clone the repository.
+4. You’ll need [Visual Studio Code][vscode] or similar IDE.
+5. Clone the repository.
 
    ```sh
    git clone https://github.com/ChilliCream/workshops.git
    ```
 
-1. Move into the folder containing the frontend code.
+6. Move into the folder containing the frontend code.
 
    ```sh
    cd workshops/crypto/frontend
    ```
 
-1. Install the required packages.
+7. Install the required packages.
 
    ```sh
    yarn
    ```
 
-1. Open the directory in Visual Studio Code.
+8. `yarn goto playground/gqless`
+9.  `yarn dev`
 
-   ```sh
-   code .
-   ```
+---
 
-#### Explore
+### Explore
 
 Let’s explore the folders and files in the starter project:
 
@@ -125,7 +106,7 @@ The purpose of these examples is to introduce some topics and use them as a guid
 
 We’ll guide you _step-by-step_ and we’ll iterate several times to cover each topic.
 
-#### Startup
+### goto script
 
 We’ll reuse the same prebuilt utilities (e.g., components, hooks, utils) and configurations for all the examples.
 
@@ -174,8 +155,6 @@ Examples:
   goto --final
 ```
 
-The examples are completely independent and not interconnected in any way. It is important to note that any modifications made to one example will not carry over when switching to another. Additionally, please be aware that the changes are neither stored nor saved, so it is recommended to save your modifications externally if needed.
-
 ---
 
 ## Preflight Checklist
@@ -219,7 +198,7 @@ Awesome! Cleared for takeoff. Let’s go ahead.
 [learn-javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 [learn-react]: https://reactjs.org/docs/getting-started.html#learn-react
 [learn-graphql]: https://graphql.org/learn/
-[learn-relay]: https://relay.dev/docs/getting-started/step-by-step-guide/
+[learn-gqless]: https://gqless.com/getting-started
 [learn-next]: https://nextjs.org/learn/foundations/about-nextjs
 [learn-node]: https://nodejs.dev/learn
 ````
