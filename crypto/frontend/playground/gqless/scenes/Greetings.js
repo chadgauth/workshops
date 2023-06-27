@@ -1,6 +1,6 @@
 import {Suspense} from 'react';
 
-import {useQuery} from '../src/gqless';
+import {useQuery} from '../gqless';
 
 export function Greetings() {
   const query = useQuery({
