@@ -1,8 +1,5 @@
 import {CacheProvider} from '@emotion/react';
 import {CssBaseline, ThemeProvider} from '@mui/material';
-import {RelayEnvironmentProvider} from 'react-relay';
-
-import {useEnvironment} from '@/client';
 import {Layout, Metadata, ModeProvider, SlotsProvider} from '@/components';
 import {usePreferredTheme} from '@/hooks';
 import {createEmotionCache} from '@/styles';
@@ -14,24 +11,21 @@ export default function MyApp({
   emotionCache = clientSideEmotionCache,
   pageProps,
 }) {
-  const environment = useEnvironment(pageProps.initialRecords);
   const [theme, mode] = usePreferredTheme();
 
   return (
-    <RelayEnvironmentProvider environment={environment}>
-      <CacheProvider value={emotionCache}>
-        <ThemeProvider theme={theme}>
-          <ModeProvider value={mode}>
-            <Metadata />
-            <CssBaseline enableColorScheme />
-            <SlotsProvider>
-              <Layout variant="full">
-                <Component {...pageProps} />
-              </Layout>
-            </SlotsProvider>
-          </ModeProvider>
-        </ThemeProvider>
-      </CacheProvider>
-    </RelayEnvironmentProvider>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
+        <ModeProvider value={mode}>
+          <Metadata />
+          <CssBaseline enableColorScheme />
+          <SlotsProvider>
+            <Layout variant="full">
+              <Component {...pageProps} />
+            </Layout>
+          </SlotsProvider>
+        </ModeProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
