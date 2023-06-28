@@ -1,7 +1,6 @@
 'use strict';
 
 const {NextConfig} = require('next');
-const relay = require('./relay.config');
 
 /** @type {NextConfig} */
 module.exports = {
@@ -12,9 +11,6 @@ module.exports = {
   },
   devIndicators: {
     buildActivity: false,
-  },
-  compiler: {
-    relay,
   },
   swcMinify: true,
 };

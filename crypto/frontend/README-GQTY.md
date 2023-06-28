@@ -1,0 +1,1 @@
+`yarn dlx @gqty/cli`
